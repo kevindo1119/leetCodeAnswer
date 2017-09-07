@@ -21,7 +21,7 @@ public:
         // 	3. Using Hash table, this problem can also can be done in O(n).
         int lCounter = 0;
         int rCounter = nums.size()-1;
-	// init lCounter to 0, rCounter to n
+	// init lCounter to 0, rCounter to n-1
 	vector<int> result;
 	while (true) {
 		if (lCounter == rCounter) {
