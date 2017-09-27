@@ -24,8 +24,8 @@ public:
                                         continue;
                                 } else {
                                         vector<int> result;
-                                        result.push_back(i+1);
-                                        result.push_back(nums.at(i+1));
+                                        result.push_back(i);
+                                        result.push_back(index);
                                         return result;
                                 }
                         }
