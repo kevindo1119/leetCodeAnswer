@@ -10,7 +10,7 @@ public:
                 for (int i = 0; i < nums.size(); ++i) {
                         for (int j = i+1; j < nums.size(); ++j) {
                                 if (target - nums.at(i) == nums.at(j)) {
-                                        vector<int> result{i+1, j+1};
+                                        vector<int> result{i, j};
                                         return result;
                                 }
                         }
