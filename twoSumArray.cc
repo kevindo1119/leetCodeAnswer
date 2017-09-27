@@ -31,8 +31,8 @@ public:
 		}
 		if (nums.at(lCounter) + nums.at(rCounter) == target) {
 			// nums.at(L) + nums.at(R) = target.
-			result.push_back(lCounter+1);
-			result.push_back(rCounter+1);
+			result.push_back(lCounter);
+			result.push_back(rCounter);
 			break;
 		}
 		else if (nums.at(lCounter) + nums.at(rCounter) < target) {
