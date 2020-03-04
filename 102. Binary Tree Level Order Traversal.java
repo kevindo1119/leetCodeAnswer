@@ -42,4 +42,4 @@ class Solution {
     }
 }
 
-// 为什么 Line 38 没有Deep copy? 因为在line 26 每次执行while 循环的时候，都new了。 全新的list
+// 为什么 Line 38 没有Deep copy? 因为在line 26 每次执行while 循环的时候，都new了全新的list
