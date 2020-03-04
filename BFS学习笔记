@@ -1,3 +1,4 @@
+//template
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -41,4 +42,20 @@ class Solution {
         return res;
     }
 }
-
+1. 用stack(DFS 标配)代替queue(BFS 标配)行不行？
+    也不是不行，就是相当于颠倒操作，走蛇字形状， 不是标准配置
+2. 是否需要实现分层？
+    需要分层的话多一层for， line29 只需要保留:
+            while (!queue.isEmpty()) {
+                TreeNode node = queue.poll();
+                level.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right  != null) {
+                    queue.offer(node.right);
+                }
+            }
+3. size = queue.size()
+    如果直接 for（int i=0; i < queue.size(); i ++） 会怎么样？
+    queue.size() 写在for loop 里面的问题是， queue.size是改变的，不能完成层拓展，但是也没有问题。
