@@ -19,15 +19,16 @@ class Solution {
         queue.offer(root);
         // 2. while 队列不空，处理队列中的节点，并拓展出新的节点
         while (!queue.isEmpty()) {
+            // 3. level x -> x + 1
             // for 上一层的节点拓展下一层的节点
             // queue.size() 写在for loop 里面的问题是， queue.size是改变的，不能完成层拓展，但是也没有问题。
             int size = queue.size();
-            for (int i = 0; i < size; ++i) {
+            for (int i = 0; i < size; ++i) { // level x
                 TreeNode node = queue.poll();
-                if (node.left != null) {
+                if (node.left != null) { // level x + 1
                     queue.offer(node.left);
                 }
-                if (node.right  != null) {
+                if (node.right  != null) { // level x + 1
                     queue.offer(node.right);
                 }
             }
