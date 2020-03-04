@@ -1,3 +1,3 @@
 List interface: arraylist.get O(1) vs Linkedlist O(n) 为什么不用arraylist 而是用list? 工程考虑，可以接arraylist 和linkedlist
-  同理： map = new hashmap<>()； 同时可以接其他map type
+  同理： map = new hashmap<>()； 同时可以接其他map type 如： tree map
 
