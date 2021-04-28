@@ -1,0 +1,38 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if len(s) < 2:
+            return True
+        
+        left = 0
+        right = len(s) -1
+        
+        while left < right:
+            
+            while left < len(s) and not (s[left].isdigit() or s[left].isalpha()):
+                left += 1
+                
+            if left == len(s):
+                return True
+            
+            while right >= 0 and not (s[right].isdigit() or s[right].isalpha()):
+                right -= 1
+                
+            if right < 0:
+                return True
+            
+            if left >= right:
+                break
+            
+            if s[left].lower() != s[right].lower():
+                break
+            else:
+                left += 1
+                right -= 1
+                
+        return left >= right
+        
+        
